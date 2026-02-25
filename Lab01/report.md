@@ -1,0 +1,1 @@
+In this Lab i learned how to use Git and its functions like how to set up a repository, creating and managing files in the terminal, understanding how Git works, merging deleting etc.
