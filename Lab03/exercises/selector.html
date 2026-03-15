@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Practice</title>
+    <link rel="stylesheet" href="../styles/selector.css">
+</head>
+<body>
+
+    <h1 id="main-title">CSS Selectors Practice</h1>
+
+    <div class="highlight-box">
+        <h2>Combinator & Pseudo-class Testing</h2>
+        <p>This paragraph is adjacent to the h2 ie Adjacent Sibling </p>
+        <p>This paragraph is a general sibling to the h2</p>
+        
+        <div class="list-container">
+            <ul>
+                <li>Item 1 (First Child - Bold)</li>
+                <li>Item 2 (Even Child - Gray Background)</li>
+                <li>Item 3</li>
+                <li>Item 4 (Even Child - Gray Background)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="article-content">
+        <h3>Attribute & Pseudo-element Testing</h3>
+        <p class="drop-cap">This paragraph uses a pseudo-element to create a drop cap on the first letter. It also demonstrates the general sibling combinator from the h3 above</p>
+        
+        <p class="special-quote">This is a quote utilizing the ::before pseudo-element</p>
+        
+        <p class="warning-text">This text shows an attribute selector containing "warning"</p>
+        
+        <form>
+            <input type="text" placeholder="Enter">
+            <button type="button">Click Me</button>
+        </form>
+
+        <p><a href="https://uetpeshawar.edu.pk" target="_blank">UET Peshawar Website (Attribute & Hover)</a></p>
+    </div>
+
+</body>
+</html>

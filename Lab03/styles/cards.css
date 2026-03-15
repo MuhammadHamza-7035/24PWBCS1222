@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #1a252f;
+    margin-bottom: 40px;
+}
+
+/* Container for the cards using CSS Grid for responsive layout */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* Base Card Styling and Borders*/
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e1e8ed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+    /* Shadow effects for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    
+    /* Hover transformations setup */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Transformations */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Image and Text Content*/
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #61E863;
+}
+
+.card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+    color: #2c3e50;
+}
+
+.card-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* Call to Action Buttons */
+.btn-cta {
+    align-self: flex-start;
+    background-color: #61E863;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-cta:hover {
+    background-color: #39913A;
+}

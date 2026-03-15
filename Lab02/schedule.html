@@ -1,49 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Course Schedule</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Schedule - 4th Semester</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        /* =========================================
+           1. RESPONSIVE TABLE CONTAINER
+           ========================================= */
+        .table-responsive {
+            width: 100%;
+            max-width: 1000px;
+            overflow-x: auto; /* Allows horizontal scrolling on mobile */
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        /* =========================================
+           2. CUSTOM BORDERS & SPACING
+           ========================================= */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Removes double borders */
+            min-width: 700px; /* Ensures columns don't squish too much */
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: center;
+            border: 1px solid #e1e8ed;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* =========================================
+           3. ZEBRA STRIPING & HOVER EFFECTS
+           ========================================= */
+        /* Zebra striping for even rows */
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* Hover effect on table rows */
+        tr:hover {
+            background-color: #e8f4f8;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Make the header row immune to the hover effect */
+        tr:first-child:hover {
+            background-color: transparent;
+        }
+
+        /* =========================================
+           4. COLOR-CODED COURSE TYPES
+           ========================================= */
+        .type-cs { background-color: #e3f2fd; color: #45b649; font-weight: 600; } /* Tech/CS Courses */
+        .type-math { background-color: #e8f5e9; color: #369E95; font-weight: 600; } /* Math Courses */
+        .type-science { background-color: #fff8e1; color: #f57f17; font-weight: 600; } /* Physics/Science */
+        .type-humanities { background-color: #f3e5f5; color: #6a1b9a; font-weight: 600; } /* Humanities/Arts */
+        .type-break { background-color: #ffebee; color: #c62828; font-style: italic; font-weight: 600; } /* Breaks */
+        .empty-slot { background-color: #fafafa; }
+
+        /* =========================================
+           5. NAVIGATION STYLING
+           ========================================= */
+        nav {
+            background-color: #2c3e50;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #3498db;
+        }
+    </style>
 </head>
 <body>
-    <table border="1">
-        <tr>
-            <th>Day/Time</th>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-        </tr>
-        <tr>
-            <td>09:00 - 10:30</td>
-            <td>Web Technologies</td>
-            <td> </td>
-            <td>Intro to Data Science</td>
-            <td>Linear Algebra</td>
-            <td>Quran Tarjuma</td>
-        </tr>
-        <tr>
-            <td>11:00- 01:00</td>
-            <td colspan="2" style="text-align: center;">Lunch break</td>
-            <td>Artificial intellignece</td>
-            <td>Operating Systems</td>
-            <td>Operating Systems</td>
-        </tr>
-        <tr>
-            <td>01:00 - 03:00</td>
-            <td>Intro to Data Science</td>
-            <td>Applied Physics</td>
-            <td>Web Technologies</td>
-            <td>Artifical Intelligence</td>
-            <td> </td>
-        </tr>
-    </table>
 
-<nav>
-    <a href="../index.html">Back to Home</a>
-    <a href="index.html" class="active">Lab 02 Home</a>
-    <a href="profile.html">Profile</a>
-    <a href="schedule.html">Schedule</a>
-    <a href="registration.html">Registration</a>
-</nav>
+    <h1>Semester Timetable</h1>
+
+    <div class="table-responsive">
+        <table>
+            <tr>
+                <th>Day/Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+            <tr>
+                <td><strong>09:00 - 10:30</strong></td>
+                <td class="type-cs">Web Technologies</td>
+                <td class="empty-slot"> </td>
+                <td class="type-cs">Intro to Data Science</td>
+                <td class="type-math">Linear Algebra</td>
+                <td class="type-humanities">Quran Tarjuma</td>
+            </tr>
+            <tr>
+                <td><strong>11:00 - 01:00</strong></td>
+                <td colspan="2" class="type-break">Lunch Break</td>
+                <td class="type-cs">Artificial Intelligence</td>
+                <td class="type-cs">Operating Systems</td>
+                <td class="type-cs">Operating Systems</td>
+            </tr>
+            <tr>
+                <td><strong>01:00 - 03:00</strong></td>
+                <td class="type-cs">Intro to Data Science</td>
+                <td class="type-science">Applied Physics</td>
+                <td class="type-cs">Web Technologies</td>
+                <td class="type-cs">Artificial Intelligence</td>
+                <td class="empty-slot"> </td>
+            </tr>
+        </table>
+    </div>
+
+    <nav>
+        <a href="../index.html">Back to Home</a>
+        <a href="index.html" class="active">Lab 02 Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="registration.html">Registration</a>
+    </nav>
+
 </body>
 </html>
