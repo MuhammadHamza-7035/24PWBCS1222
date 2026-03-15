@@ -43,7 +43,7 @@ h1 {
     background-image: url('../images/backgrounds/H1.png');
     background-repeat: repeat;
     color: black;
-        ext-shadow: 1px 1px 4px white;
+        exit-shadow: 1px 1px 4px white;
 }
 
 .bg-no-repeat {
