@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 224L - Lab 03 & 04: CSS Fundamentals</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #4EC751;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--secondary);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.2rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .task-list li {
+            margin-bottom: 10px;
+        }
+
+        .task-list a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: color 0.2s ease;
+        }
+
+        .task-list a:hover {
+            color: #4EC751;
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>CS 224L Web Technologies</h1>
+        <p>Lab 03 & 04: CSS Fundamentals - Styling and Visual Design</p>
+    </div>
+
+    <div class="dashboard">
+        <div class="card">
+            <h2>Fundamentals & Selectors</h2>
+            <ul class="task-list">
+                <li><a href="exercises/selectors.html">Task 1: CSS Selectors Practice</a></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Styling Basics</h2>
+            <ul class="task-list">
+                <li><a href="exercises/typography.html">Task 2: Typography Showcase</a></li>
+                <li><a href="exercises/backgrounds.html">Task 3: Background Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>UI Components</h2>
+            <ul class="task-list">
+                <li><a href="exercises/images.html">Task 4: Image Styling Portfolio</a></li>
+                <li><a href="exercises/buttons.html">Task 5: Button Styling Collection</a></li>
+                <li><a href="exercises/form.html">Task 6: Form Styling</a></li>
+                <li><a href="exercises/cards.html">Task 7: Card Component Design</a></li>
+                <li><a href="exercises/navigation.html">Task 8: Navigation Menu Styling</a></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Advanced CSS</h2>
+            <ul class="task-list">
+                <li><a href="exercises/transforms.html">Task 9: CSS Transform Gallery</a></li>
+                <li><a href="exercises/effects.html">Task 10: Advanced Effects Showcase</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Submitted by: Muhammad Hamza | 4th Semester</p>
+    </footer>
+
+</body>
+</html>
