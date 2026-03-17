@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Utilities & Preferences</title>
+    <link rel="stylesheet" href="../styles/utilities.css">
+    <style>
+
+        body { font-family: Arial, sans-serif; padding: 20px; transition: background-color 0.3s, color 0.3s; }
+        .demo-box { border: 2px solid #007bff; background-color: #e9ecef; border-radius: 5px; color: black; }
+        .flex-item { background: #007bff; color: white; padding: 20px; border: 1px solid #0056b3; }
+        h2 { border-bottom: 2px solid #ccc; padding-bottom: 5px; margin-top: 40px; }
+
+        .animated-box {
+            width: 100px; height: 100px; background: orange; margin: 20px 0;
+            animation: spin 3s infinite linear;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <h1>Utilities & Preferences</h1>
+
+    <div class="print-hide">
+        <h2>Show/Hide & Alignment Utilities</h2>
+        <div class="demo-box p-3 text-center text-md-left m-2">
+            <strong>Alignment:</strong>centered on mobile, but left-aligned on tablets and desktops!
+        </div>
+
+        <div class="demo-box p-3 d-none d-md-block m-2" style="border-color: red; background: #ffe6e6;">
+            <strong>Display:</strong>HIDDEN on mobile screens, but VISIBLE on tablets and desktops!
+        </div>
+        
+        <div class="demo-box p-3 d-block d-md-none m-2" style="border-color: green; background: #e6ffe6;">
+            <strong>Display:</strong>VISIBLE on mobile screens, but HIDDEN on tablets and desktops!
+        </div>
+
+        <h2>Flexbox Utilities</h2>
+        <p>Resize the screen to see these boxes stack (column) vs sit side-by-side (row).</p>
+        <div class="d-flex flex-column flex-md-row">
+            <div class="flex-item p-3 m-1">Flex Item 1</div>
+            <div class="flex-item p-3 m-1">Flex Item 2</div>
+            <div class="flex-item p-3 m-1">Flex Item 3</div>
+        </div>
+
+        <h2>Preference Media Queries</h2>
+        
+        <div class="demo-box p-3 m-2 card">
+            <strong>Dark Mode Test:</strong> Change your system theme to Dark Mode. The background will be dark gray, and text will be white
+        </div>
+
+        <div class="animated-box"></div>
+        <p><strong>Reduced Motion Test:</strong> If your system settings have "reduced motion" enabled, the orange box above will stop spinning instantly.</p>
+    </div>
+
+    <div class="d-none print-only">
+        <h2>Print Preview Activated!</h2>
+        <p>This text only shows up when you try to print this page.</p>
+    </div>
+
+</body>
+</html>

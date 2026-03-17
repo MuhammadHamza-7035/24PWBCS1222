@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Card Layout</title>
+    <link rel="stylesheet" href="../styles/flexbox-card.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 100%;
+        }
+
+        @media (min-width: 600px) {
+            .card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .card {
+                flex: 1 1 calc(33.333% - 20px);
+            }
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .card-content {
+            flex-grow: 1;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .read-more-btn {
+            align-self: flex-start;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .read-more-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        
+        <div class="card">
+            <h2>First Card</h2>
+            <div class="card-content">
+                 This is the First Card used.
+            </div>
+            <button class="read-more-btn">Read More</button>
+        </div>
+
+        <div class="card">
+            <h2>Second Card</h2>
+            <div class="card-content">
+                 This is the Second Card used.
+            </div>
+            <button class="read-more-btn">Read More</button>
+        </div>
+
+        <div class="card">
+            <h2>Third Card</h2>
+            <div class="card-content">
+                This is the Third Card used.
+            </div>
+            <button class="read-more-btn">Read More</button>
+        </div>
+
+        <div class="card">
+            <h2>Fourth Card</h2>
+            <div class="card-content">
+                This is the Fourth Card used.
+            </div>
+            <button class="read-more-btn">Read More</button>
+        </div>
+
+        <div class="card">
+            <h2> Fifth Card</h2>
+            <div class="card-content">
+                This is the Fifth Card used.
+            </div>
+            <button class="read-more-btn">Read More</button>
+        </div>
+
+        <div class="card">
+            <h2> Sixth Card</h2>
+            <div class="card-content">
+                This is the Sixth Card used.
+            </div>
+            <button class="read-more-btn">Read More</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

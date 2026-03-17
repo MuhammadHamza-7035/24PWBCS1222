@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Breakpoints</title>
+    <link rel="stylesheet" href="../styles/media-queries.css">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        
+        .container {
+            background-color: #ffcccc;
+            border: 2px solid #333;
+            padding: 50px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .current-size::after { content: "Mobile (< 768px)"; font-weight: bold; font-size: 1.5rem; }
+
+        @media (min-width: 768px) { 
+            .container { background-color: #ccffcc;}
+            .current-size::after { content: "Tablet (>= 768px)"; }
+        }
+
+        @media (min-width: 1024px) { 
+            .container { background-color: #ccccff;}
+            .current-size::after { content: "Small Desktop (>= 1024px)"; }
+        }
+
+        @media (min-width: 1200px) { 
+            .container { background-color: #ffffcc;}
+            .current-size::after { content: "Large Desktop (>= 1200px)"; }
+        }
+
+        @media (min-width: 1400px) { 
+            .container { background-color: #e6ccff;}
+            .current-size::after { content: "Extra Large Desktop (>= 1400px)"; }
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Common Breakpoint Implementation</h2>
+    <p>Resize the browser window to see the container width and color change.</p>
+
+    <div class="container">
+        <div class="current-size"></div>
+    </div>
+
+</body>
+</html>

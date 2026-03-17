@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 05 & 06 - Web Technologies</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --bg: #f8f9fa;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background-color: var(--primary);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary);
+        }
+
+        .hero h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+        }
+
+        .student-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .grid-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .task-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            border-color: var(--secondary);
+        }
+
+        .task-num {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .task-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+        }
+
+        .task-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border-top: 1px solid #ddd;
+            margin-top: 50px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Lab 05 & 06: CSS Layout Techniques & Responsive Design</h1>
+        <div class="student-info">
+            <span><strong>Name:</strong> Muhammad Hamza</span>
+            <span><strong>Reg No:</strong> 24PWBCS1222</span>
+            <span><strong>Section:</strong> D (4th Semester)</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="grid-links">
+            <a href="../Lab05/excercises/display-excercises.html" class="task-card">
+                <span class="task-num">Task 1</span>
+                <h3 class="task-title">Display Properties</h3>
+                <p class="task-desc">Demonstration of block, inline, inline-block, and table display types.</p>
+            </a>
+            
+            <a href="../Lab05/layouts/magzine-grid.html" class="task-card">
+                <span class="task-num">Task 2</span>
+                <h3 class="task-title">Float Magazine Layout</h3>
+                <p class="task-desc">Traditional multi-column layout using CSS floats and clearfix.</p>
+            </a>
+            
+            <a href="../Lab05/excercises/position-excercises.html" class="task-card">
+                <span class="task-num">Task 3</span>
+                <h3 class="task-title">Positioning Challenge</h3>
+                <p class="task-desc">Fixed headers, sticky sidebars, and absolutely positioned modals.</p>
+            </a>
+
+            <a href="../Lab05/excercises/flexbox-excercise.html" class="task-card">
+                <span class="task-num">Task 4</span>
+                <h3 class="task-title">Flexbox Navigation</h3>
+                <p class="task-desc">Responsive horizontal nav and hamburger menu.</p>
+            </a>
+            
+            <a href="../Lab05/excercises/flexbox-card.html" class="task-card">
+                <span class="task-num">Task 5</span>
+                <h3 class="task-title">Flexbox Cards</h3>
+                <p class="task-desc">Equal height cards with flexible content alignment.</p>
+            </a>
+
+            <a href="../Lab05/excercises/grid-excercises.html" class="task-card">
+                <span class="task-num">Task 6</span>
+                <h3 class="task-title">Photo Gallery</h3>
+                <p class="task-desc">Masonry-style image gallery using Grid areas.</p>
+            </a>
+
+            <a href="../Lab05/layouts/holy-grail-comparison.html" class="task-card">
+                <span class="task-num">Task 7</span>
+                <h3 class="task-title">Holy Grail Comparison</h3>
+                <p class="task-desc">The same classic layout built with Floats, Flexbox, and Grid.</p>
+            </a>
+
+            <a href="../Lab05/layouts/ecommerce-grid.html" class="task-card">
+                <span class="task-num">Task 8</span>
+                <h3 class="task-title">E-commerce Product Grid</h3>
+                <p class="task-desc">Product listing with a collapsible filter sidebar.</p>
+            </a>
+            
+            <a href="../Lab05/layouts/dashboard-grid.html" class="task-card">
+                <span class="task-num">Task 9</span>
+                <h3 class="task-title">Admin Dashboard</h3>
+                <p class="task-desc">Complex structure combining Grid and Flexbox components.</p>
+            </a>
+
+            <a href="../Lab05/layouts/responsive-demo.html" class="task-card">
+                <span class="task-num">Task 10</span>
+                <h3 class="task-title">Media Query Demo</h3>
+                <p class="task-desc">Visual indicators showing active breakpoints.</p>
+            </a>
+
+            <a href="../Lab05/layouts/magzine-grid.html" class="task-card">
+                <span class="task-num">Task 11</span>
+                <h3 class="task-title">Asymmetric Magazine</h3>
+                <p class="task-desc">Advanced grid layout with asymmetric columns on desktop.</p>
+            </a>
+
+            <a href="../Lab05/layouts/flexboxform.html" class="task-card">
+                <span class="task-num">Task 12</span>
+                <h3 class="task-title">Responsive Form Builder</h3>
+                <p class="task-desc">Dynamic multi-column forms that stack on mobile.</p>
+            </a>
+
+            <a href="../Lab05/layouts/portfolio-mixed.html" class="task-card">
+                <span class="task-num">Task 13</span>
+                <h3 class="task-title">Mixed Portfolio Layout</h3>
+                <p class="task-desc">Capstone layout combining all CSS methodologies.</p>
+            </a>
+            
+            <a href="../Lab05/layouts/responsive-tabe.html" class="task-card">
+                <span class="task-num">Task 14</span>
+                <h3 class="task-title">Responsive Data Table</h3>
+                <p class="task-desc">Table that converts to a stacked card layout on mobile.</p>
+            </a>
+            
+            <a href="../Lab05/layouts/landing-page.html" class="task-card">
+                <span class="task-num">Task 15</span>
+                <h3 class="task-title">Mobile-First Landing Page</h3>
+                <p class="task-desc">Progressive enhancement with responsive images.</p>
+            </a>
+
+            <a href="../Lab05/excercises/media-queries-excercise.html" class="task-card">
+                <span class="task-num">Task 16</span>
+                <h3 class="task-title">Container Breakpoints</h3>
+                <p class="task-desc">Demonstration of standard screen size snapping.</p>
+            </a>
+            
+            <a href="../Lab05/excercises/utilities-demo.html" class="task-card">
+                <span class="task-num">Task 17 & 18</span>
+                <h3 class="task-title">Utilities & Preferences</h3>
+                <p class="task-desc">Testing Dark Mode, Print Styles, and spacing classes.</p>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Submitted to Sir Mohammad | Department of Computer Science | UET Peshawar</p>
+    </footer>
+
+</body>
+</html>
